@@ -2,9 +2,16 @@ import React, { useRef } from "react";
 import { Canvas, ThreeEvent, useFrame } from "@react-three/fiber";
 import { OrbitControls, useGLTF } from "@react-three/drei";
 import * as THREE from "three";
+import { VRButton } from "three/examples/jsm/webxr/VRButton.js";
 
 type ModelProps = {
   position: [number, number, number];
+  onPlaneClick: (event: ThreeEvent<MouseEvent>) => void;
+};
+
+type ARSceneProps = {
+  modelVisible: boolean;
+  modelPosition: [number, number, number];
   onPlaneClick: (event: ThreeEvent<MouseEvent>) => void;
 };
 
@@ -23,12 +30,6 @@ const Model: React.FC<ModelProps> = ({ position, onPlaneClick }) => {
   );
 };
 
-type ARSceneProps = {
-  modelVisible: boolean;
-  modelPosition: [number, number, number];
-  onPlaneClick: (event: ThreeEvent<MouseEvent>) => void;
-};
-
 const ARScene: React.FC<ARSceneProps> = ({
   modelVisible,
   modelPosition,
@@ -42,7 +43,6 @@ const ARScene: React.FC<ARSceneProps> = ({
       <ambientLight />
       <pointLight position={[10, 10, 10]} />
 
-      {/* Render model only if visible */}
       {modelVisible && (
         <Model position={modelPosition} onPlaneClick={onPlaneClick} />
       )}
@@ -51,5 +51,4 @@ const ARScene: React.FC<ARSceneProps> = ({
     </Canvas>
   );
 };
-
 export default ARScene;
