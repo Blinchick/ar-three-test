@@ -1,7 +1,7 @@
-import React, { useRef } from 'react';
-import { Canvas, ThreeEvent, useFrame } from '@react-three/fiber';
-import { OrbitControls, useGLTF } from '@react-three/drei';
-import * as THREE from 'three';
+import React, { useRef } from "react";
+import { Canvas, ThreeEvent, useFrame } from "@react-three/fiber";
+import { OrbitControls, useGLTF } from "@react-three/drei";
+import * as THREE from "three";
 
 type ModelProps = {
   position: [number, number, number];
@@ -9,7 +9,7 @@ type ModelProps = {
 };
 
 const Model: React.FC<ModelProps> = ({ position, onPlaneClick }) => {
-  const gltf = useGLTF('/models/deer.glb');
+  const gltf = useGLTF("/models/deer.glb");
   const modelRef = useRef<THREE.Group>(null);
 
   useFrame(() => {
@@ -18,7 +18,9 @@ const Model: React.FC<ModelProps> = ({ position, onPlaneClick }) => {
     }
   });
 
-  return <primitive ref={modelRef} object={gltf.scene} onClick={onPlaneClick} />;
+  return (
+    <primitive ref={modelRef} object={gltf.scene} onClick={onPlaneClick} />
+  );
 };
 
 type ARSceneProps = {
@@ -27,17 +29,24 @@ type ARSceneProps = {
   onPlaneClick: (event: ThreeEvent<MouseEvent>) => void;
 };
 
-const ARScene: React.FC<ARSceneProps> = ({ modelVisible, modelPosition, onPlaneClick }) => {
+const ARScene: React.FC<ARSceneProps> = ({
+  modelVisible,
+  modelPosition,
+  onPlaneClick,
+}) => {
   return (
     <Canvas
       gl={{ antialias: true }}
-      camera={{ position: [0, 1.6, 2], fov: 50 }}>
+      camera={{ position: [0, 1.6, 2], fov: 50 }}
+    >
       <ambientLight />
       <pointLight position={[10, 10, 10]} />
 
       {/* Render model only if visible */}
-      {modelVisible && <Model position={modelPosition} onPlaneClick={onPlaneClick} />}
-      
+      {modelVisible && (
+        <Model position={modelPosition} onPlaneClick={onPlaneClick} />
+      )}
+
       <OrbitControls enableZoom={false} />
     </Canvas>
   );
