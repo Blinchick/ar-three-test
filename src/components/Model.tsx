@@ -13,8 +13,8 @@ declare global {
 }
 
 const Model = () => {
-  const glbSrc = "/models/po_kung_fu_panda_chi_master.glb";
-  const iosSrc = "/models/po_kung_fu_panda_chi_master.usdz";
+  const glbSrc = "/models/tigress_kung_fu_panda_chi_master.glb";
+  const iosSrc = "/models/Tigress_Kung_Fu_Panda_Chi_Master.usdz";
 
   return (
     <div>
