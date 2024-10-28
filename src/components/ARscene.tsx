@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { Canvas, ThreeEvent, useFrame } from "@react-three/fiber";
 import { OrbitControls, useGLTF } from "@react-three/drei";
 import * as THREE from "three";
-// import { VRButton } from "three/examples/jsm/webxr/VRButton.js";
+import { VRButton } from "three/examples/jsm/webxr/VRButton.js";
 
 type ModelProps = {
   position: [number, number, number];
