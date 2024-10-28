@@ -1,4 +1,7 @@
+import dynamic from "next/dynamic";
 import localFont from "next/font/local";
+
+const Model = dynamic(() => import("@/components/Model"), { ssr: false });
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -21,16 +24,8 @@ export default function Home() {
         <h1 className="text-2xl font-semibold text-center">
           Welcome to the AR Experience
         </h1>
-        <model-viewer
-          src="/models/po_kung_fu_panda_chi_master.glb"
-          ar
-          ar-modes="webxr"
-          style={{ width: "100%", height: "500px" }}
-        >
-          <button slot="ar-button" id="enter-ar">
-            Enter AR
-          </button>
-        </model-viewer>
+
+        <Model />
       </main>
     </div>
   );
