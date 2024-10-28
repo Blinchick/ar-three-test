@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import dynamic from "next/dynamic";
 import localFont from "next/font/local";
 
