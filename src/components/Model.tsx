@@ -2,7 +2,6 @@ import React from "react";
 import "@google/model-viewer/lib/model-viewer";
 import type { ModelViewerElement } from "@google/model-viewer/dist/model-viewer";
 
-// Extend JSX Intrinsic Elements without conflicting with the library's types.
 declare global {
   /* eslint-disable @typescript-eslint/no-namespace */
   namespace JSX {
@@ -15,7 +14,7 @@ declare global {
 
 const Model = () => {
   const glbSrc = "/models/po_kung_fu_panda_chi_master.glb";
-  const iosSrc = "/models/po_kung_fu_panda_chi_master.glb";
+  const iosSrc = "/models/po_kung_fu_panda_chi_master.usdz";
 
   return (
     <div>
