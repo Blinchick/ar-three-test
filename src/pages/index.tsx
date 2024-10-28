@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import localFont from "next/font/local";
 import ARScene from "../components/ARscene";
 import { ThreeEvent } from "@react-three/fiber";
@@ -42,12 +42,14 @@ export default function Home() {
         <h1 className="text-2xl font-semibold text-center">
           Welcome to the AR Experience
         </h1>
+
         <button
           onClick={handlePlaceModel}
           className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
         >
           Place Model
         </button>
+
         <div className="w-full h-[400px] mt-10 border border-gray-300 rounded-lg">
           <ARScene
             modelVisible={modelVisible}
