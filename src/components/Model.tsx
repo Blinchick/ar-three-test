@@ -30,7 +30,7 @@ const Model: React.FC<ModelProps> = ({ glbSrc, iosSrc }) => (
       ar
       autoplay
       ar-modes="webxr scene-viewer quick-look"
-      scale="0.5 0.5 0.5"
+      ar-scale="0.2 0.2 0.2"
       auto-rotate
       camera-controls
       camera-orbit="0deg 90deg 0deg 8.37364m"
