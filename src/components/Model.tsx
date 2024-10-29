@@ -13,15 +13,15 @@ declare global {
 }
 
 const Model = () => {
-  const glbSrc = "/models/ImageToStl.com_hip hop dancing.glb";
-  // const iosSrc = "/models/Tigress_Kung_Fu_Panda_Chi_Master.usdz";
+  const glbSrc = "/models/ImageToStl.com_hip-hop-dancing.glb";
+  const iosSrc = "/models/hip-hop-dancing.usdz";
 
   return (
     <div>
       <model-viewer
         id="first"
         src={glbSrc}
-        // ios-src={iosSrc}
+        ios-src={iosSrc}
         seamless-poster
         environment-image="neutral"
         interaction-prompt-threshold="0"
@@ -30,7 +30,6 @@ const Model = () => {
         autoplay
         ar-modes="webxr scene-viewer quick-look"
         auto-rotate
-        scale="0.5 0.5 0.5"
         camera-controls
         camera-orbit="0deg 90deg 0deg 8.37364m"
         alt="3D model"
