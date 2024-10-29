@@ -13,15 +13,15 @@ declare global {
 }
 
 const Model = () => {
-  const glbSrc = "/models/tigress_kung_fu_panda_chi_master.glb";
-  const iosSrc = "/models/Tigress_Kung_Fu_Panda_Chi_Master.usdz";
+  const glbSrc = "/models/ImageToStl.com_hip hop dancing.glb";
+  // const iosSrc = "/models/Tigress_Kung_Fu_Panda_Chi_Master.usdz";
 
   return (
     <div>
       <model-viewer
         id="first"
         src={glbSrc}
-        ios-src={iosSrc}
+        // ios-src={iosSrc}
         seamless-poster
         environment-image="neutral"
         interaction-prompt-threshold="0"
