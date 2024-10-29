@@ -25,7 +25,14 @@ export default function Home() {
           Welcome to the AR Experience
         </h1>
 
-        <Model />
+        <Model
+          glbSrc="/models/ImageToStl.com_hip-hop-dancing.glb"
+          iosSrc="/models/hip-hop-dancing.usdz"
+        />
+        <Model
+          glbSrc="/models/rumba-dancing.glb"
+          iosSrc="/models/rumba-dancing.usdz"
+        />
       </main>
     </div>
   );
