@@ -24,18 +24,25 @@ export default function Home() {
         <h1 className="text-2xl font-semibold text-center">
           Welcome to the AR Experience
         </h1>
-        <Model
-          glbSrc="/models/hip-hop-dancing.glb"
-          iosSrc="/models/hip-hop-dancing.usdz"
-        />
-        <Model
-          glbSrc="/models/rumba-dancing.glb"
-          iosSrc="/models/rumba-dancing.usdz"
-        />
-        <Model
-          glbSrc="/models/twerk-dancing.glb"
-          iosSrc="/models/twerk-dancing.usdz"
-        />
+        <div className="flex flex-wrap">
+          <Model
+            glbSrc="/models/rumba-dancing.glb"
+            iosSrc="/models/rumba-dancing.usdz"
+          />
+          <Model
+            glbSrc="/models/twerk-dancing.glb"
+            iosSrc="/models/twerk-dancing.usdz"
+          />
+          <Model
+            glbSrc="/models/breakdance.glb"
+            iosSrc="/models/breakdance.usdz"
+          />
+          <Model glbSrc="/models/catwalk.glb" iosSrc="/models/catwalk.usdz" />
+          <Model
+            glbSrc="/models/hip-hop-dancing.glb"
+            iosSrc="/models/hip-hop-dancing.usdz"
+          />
+        </div>
       </main>
     </div>
   );

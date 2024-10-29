@@ -35,6 +35,7 @@ const Model: React.FC<ModelProps> = ({ glbSrc, iosSrc }) => (
       camera-controls
       camera-orbit="0deg 90deg 0deg 8.37364m"
       alt="3D model"
+      scale="0.9 0.9 0.9"
     ></model-viewer>
   </div>
 );
