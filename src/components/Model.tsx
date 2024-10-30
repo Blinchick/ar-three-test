@@ -22,7 +22,7 @@ const Model: React.FC<ModelProps> = ({ glbSrc, iosSrc }) => (
     <model-viewer
       id="first"
       src={glbSrc}
-      ios-src={iosSrc}
+      // ios-src={iosSrc}
       seamless-poster
       environment-image="neutral"
       interaction-prompt-threshold="0"
