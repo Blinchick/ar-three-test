@@ -14,15 +14,12 @@ declare global {
 
 interface ModelProps {
   glbSrc: string;
-  iosSrc: string;
 }
 
-const Model: React.FC<ModelProps> = ({ glbSrc, iosSrc }) => (
+const Model: React.FC<ModelProps> = ({ glbSrc }) => (
   <div>
     <model-viewer
       id="first"
-      src={glbSrc}
-      // ios-src={iosSrc}
       seamless-poster
       environment-image="neutral"
       interaction-prompt-threshold="0"
