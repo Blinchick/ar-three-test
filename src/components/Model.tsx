@@ -20,6 +20,7 @@ const Model: React.FC<ModelProps> = ({ glbSrc }) => (
   <div>
     <model-viewer
       id="first"
+      src={glbSrc}
       seamless-poster
       environment-image="neutral"
       interaction-prompt-threshold="0"
