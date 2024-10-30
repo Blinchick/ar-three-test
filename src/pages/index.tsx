@@ -26,7 +26,7 @@ export default function Home() {
         </h1>
         <div className="flex flex-wrap">
           <Model
-            glbSrc="/models/rumba-dancing-v1.glb"
+            glbSrc="/models/rumba-dancing.glb"
             iosSrc="/models/rumba-dancing.usdz"
           />
           <Model
