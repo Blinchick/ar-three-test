@@ -25,11 +25,23 @@ export default function Home() {
           Welcome to the AR Experience
         </h1>
         <div className="flex flex-wrap">
-          <Model glbSrc="/models/rumba-dancing.glb" />
-          <Model glbSrc="/models/twerk-dancing.glb" />
-          <Model glbSrc="/models/breakdance.glb" />
-          <Model glbSrc="/models/catwalk.glb" />
-          <Model glbSrc="/models/hip-hop-dancing.glb" />
+          <Model
+            glbSrc="/models/rumba-dancing.glb"
+            iosSrc="/models/rumba-dancing.usdz"
+          />
+          <Model
+            glbSrc="/models/twerk-dancing.glb"
+            iosSrc="/models/twerk-dancing.usdz"
+          />
+          <Model
+            glbSrc="/models/breakdance.glb"
+            iosSrc="/models/breakdance.usdz"
+          />
+          <Model glbSrc="/models/catwalk.glb" iosSrc="/models/catwalk.usdz" />
+          <Model
+            glbSrc="/models/hip-hop-dancing.glb"
+            iosSrc="/models/hip-hop-dancing.usdz"
+          />
         </div>
       </main>
     </div>
