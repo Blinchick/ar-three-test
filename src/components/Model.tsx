@@ -3,6 +3,7 @@ import "@google/model-viewer/lib/model-viewer";
 import type { ModelViewerElement } from "@google/model-viewer/dist/model-viewer";
 
 declare global {
+  /* eslint-disable @typescript-eslint/no-namespace */
   namespace JSX {
     interface IntrinsicElements {
       "model-viewer": React.DetailedHTMLProps<
@@ -34,8 +35,11 @@ interface ModelProps {
   glbSrc: string;
 }
 
-const Model = React.forwardRef<ModelViewerElement, ModelProps>(
-  ({ glbSrc }, ref) => (
+const Model = React.forwardRef<ModelViewerElement, ModelProps>(function Model(
+  { glbSrc },
+  ref
+) {
+  return (
     <div>
       <model-viewer
         ref={ref}
@@ -61,11 +65,10 @@ const Model = React.forwardRef<ModelViewerElement, ModelProps>(
         <div id="ar-prompt">
           <img src="../../assets/hand.png" />
         </div>
-
         <button id="ar-failure">AR is not tracking!</button>
       </model-viewer>
     </div>
-  )
-);
+  );
+});
 
 export default Model;
