@@ -3,6 +3,7 @@ import "@google/model-viewer/lib/model-viewer";
 import type { ModelViewerElement } from "@google/model-viewer/dist/model-viewer";
 
 declare global {
+  /* eslint-disable @typescript-eslint/no-namespace */
   namespace JSX {
     interface IntrinsicElements {
       "model-viewer": Partial<ModelViewerElement> &
