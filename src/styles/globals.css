@@ -27,6 +27,8 @@ body {
 model-viewer {
   background-color: #eee;
   overflow-x: hidden;
+  width: 500px;
+  height: 500px;
 }
 
 #ar-button {
