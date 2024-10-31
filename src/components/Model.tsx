@@ -12,6 +12,7 @@ declare global {
       > & {
         id?: string;
         src?: string;
+        "ios-src": string;
         seamlessPoster?: boolean;
         environmentImage?: string;
         interactionPromptThreshold?: string;
@@ -37,7 +38,7 @@ interface ModelProps {
 }
 
 const Model = React.forwardRef<ModelViewerElement, ModelProps>(function Model(
-  { glbSrc },
+  { glbSrc, iosSrc },
   ref
 ) {
   return (
@@ -46,7 +47,7 @@ const Model = React.forwardRef<ModelViewerElement, ModelProps>(function Model(
         ref={ref}
         id="first"
         src={glbSrc}
-        ios-src={glbSrc}
+        ios-src={iosSrc}
         seamless-poster
         environment-image="neutral"
         interaction-prompt-threshold="0"
