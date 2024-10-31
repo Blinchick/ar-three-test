@@ -17,10 +17,10 @@ interface ModelProps {
   iosSrc: string;
 }
 
-const modelViewerStyles: React.CSSProperties = {
-  width: "500px",
-  height: "700px",
-};
+// const modelViewerStyles: React.CSSProperties = {
+//   width: "500px",
+//   height: "700px",
+// };
 
 const Model: React.FC<ModelProps> = ({ glbSrc, iosSrc }) => (
   <div>
@@ -42,7 +42,7 @@ const Model: React.FC<ModelProps> = ({ glbSrc, iosSrc }) => (
       alt="3D model"
       scale="0.5 0.5 0.5"
       /* eslint-disable @typescript-eslint/no-explicit-any */
-      style={modelViewerStyles as any}
+      // style={modelViewerStyles as any}
     ></model-viewer>
   </div>
 );
